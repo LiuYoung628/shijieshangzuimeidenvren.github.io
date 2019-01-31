@@ -1,20 +1,408 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-	<title>破局网</title>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="keywords" content="破局网" />
-	<meta name="description" content="破局网 " />
-	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-	<link href="css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
-	<link href="css/ohmygod.css" rel="stylesheet" type="text/css"/>
+    <title>破局网</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
+    <link rel="stylesheet" href="./js/bootstrap-3.3.7-dist/css/bootstrap.min.css">
 
+    <script src="./js/jquery-3.2.1.min.js"></script>
+    <script src="./js/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
 
+    <style>
+        .jumbotron {
+            background-color: #1b6d85;
+            color: #fafafa;
+            padding: 100px 25px;
+        }
 
+        footer .glyphicon {
+            font-size: 20px;
+            margin-bottom: 20px;
+            color: #1b6d85;
+        }
+
+        .container-fluid {
+            padding: 60px 50px;
+        }
+
+        .bg-grey {
+            background-color: #f6f6f6;
+        }
+
+        .logo {
+            color: #1b6d85;
+            font-size: 200px;
+        }
+
+        .logo-small {
+            color: #1b6d85;
+            font-size: 50px;
+        }
+
+        .navbar {
+            margin-bottom: 0;
+            background-color: #1b6d85;
+            z-index: 9999;
+            border: 0;
+            font-size: 12px !important;
+            line-height: 1.42857143 !important;
+            letter-spacing: 4px;
+            border-radius: 0;
+        }
+
+        .navbar li a, .navbar .navbar-brand {
+            color: #fff !important;
+        }
+
+        .navbar-nav li a:hover, .navbar-nav li.active a {
+            color: #1b6d85 !important;
+            background-color: #fff !important;
+        }
+
+        .navbar-default .navbar-toggle {
+            border-color: transparent;
+            color: #fff !important;
+        }
+
+        .modal-header, .close {
+            background-color: #1b6d85;
+            color: white !important;
+            text-align: center;
+            font-size: 30px;
+        }
+
+        .modal-footer {
+            background-color: #f9f9f9;
+        }
+
+        .thumbnail {
+            padding: 0 0 15px 0;
+            border: 1px solid #f6f6f6;
+            border-radius: 0;
+            transition: box-shadow 0.5s;
+        }
+
+        .thumbnail:hover {
+            box-shadow: 5px 0px 40px rgba(0, 0, 0, .2);
+        }
+
+        .thumbnail img {
+            width: 100%;
+            height: 500px auto;
+            margin-bottom: 10px;
+        }
+
+        .slideanim {
+            visibility: hidden;
+        }
+
+        .slide {
+            /* The name of the animation */
+            animation-name: slide;
+            -webkit-animation-name: slide;
+            /* The duration of the animation */
+            animation-duration: 1s;
+            -webkit-animation-duration: 1s;
+            /* Make the element visible */
+            visibility: visible;
+        }
+
+        /* Go from 0% to 100% opacity (see-through) and specify the percentage from when to slide in the element along the Y-axis */
+        @keyframes slide {
+            0% {
+                opacity: 0;
+                transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0%);
+            }
+        }
+
+        @-webkit-keyframes slide {
+            0% {
+                opacity: 0;
+                -webkit-transform: translateY(70%);
+            }
+            100% {
+                opacity: 1;
+                -webkit-transform: translateY(0%);
+            }
+        }
+
+        . map {
+
+        }
+
+    </style>
 </head>
-<body>
-	
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="60">
+<!--我是头部-->
+<div class="jumbotron text-center">
+    <h1>房地产破局网</h1>
+    <p>连云港易衡行房地产困境破局策划工作室</p>
+</div>
+
+<!--我是中间部分-->
+<div class="container">
+
+    <!--我是 创立人介绍-->
+    <div id="creater" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>Who I am ? 我是谁</h2>
+                <br>
+                <h4><strong>刘贤磊:</strong> 连云港易衡行房地产困境破局工作室创立人</h4>
+                <h4><strong>我拥有:</strong> 30年人事工程建设房地产开发经营管理</h4>
+                <h4>对房地产领域困境有充分的了解，对困境的破局有独到的研究、判断与解决，经历并操盘、领导了多个困难项目走出困境</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-grain logo slide"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--我是 我的发现-->
+    <div id="find" class="container-fluid bg-grey">
+        <div class="row">
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-search logo slide"></span>
+            </div>
+            <div class="col-sm-8">
+                <h2>My find 发现</h2>
+                <br>
+                <h4><strong>Leancloud:</strong> 第三方后台，全栈的可能性与不可能</h4>
+                <h4><strong>ARkit:</strong> 增强现实，iOS的最新利刃，Google的追赶</h4>
+            </div>
+        </div>
+    </div>
+
+    <!--我是 我的计划-->
+    <div id="task" class="container-fluid">
+        <div class="row">
+            <div class="col-sm-8">
+                <h2>My task 我的计划</h2>
+                <br>
+                <h4><strong>论文:</strong> 进度 -------》<a href="paper">增加进度</a></h4>
+                <h4><strong>找工作:</strong> 简历，面试，与琐事</h4>
+            </div>
+            <div class="col-sm-4">
+                <span class="glyphicon glyphicon-list-alt logo slideanim"></span>
+            </div>
+        </div>
+    </div>
+
+    <!--我是 瞧瞧-->
+    <div id="work" class="container-fluid text-center bg-grey">
+        <h2>思维方式</h2>
+        <h4>面对困境，我们团队的几种思考方式</h4>
+        <br/>
+        <div class="row text-center">
+            <div class="col-sm-4">
+                <div class="thumbnail slideanim">
+                    <a href="img/poju1.jpg" target="_blank">
+                        <img src="img/poju1.jpg" alt="Canada and Leaf">
+                    </a>
+                    <p><strong>破所能破</strong></p>
+                    <p>我们可以打开<strong>任何</strong>局面</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail slideanim">
+                    <a href="img/poju2.jpg" target="_blank">
+                        <img src="img/poju2.jpg" alt="Japan and Cat">
+                    </a>
+                    <p><strong>直面困境</strong></p>
+                    <p>不要害怕<strong>面对</strong>困境</p>
+                </div>
+            </div>
+            <div class="col-sm-4">
+                <div class="thumbnail slideanim">
+                    <a href="img/poju3.jpg" target="_blank">
+                        <img src="img/poju3.jpg" alt="American and Pop">
+                    </a>
+                    <p><strong>逆向思维</strong></p>
+                    <p>换个<strong>方向</strong>思考问题</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!--我是 联系我-->
+    <div id="contact" class="container-fluid">
+        <h2 class="text-center">联系我们</h2>
+        <div class="row ">
+            <div class="col-sm-5">
+                <p>这些方式可以联系到我们</p>
+                <p><span class="glyphicon glyphicon-map-marker"></span> Liuyungang,Jiangsu,China</p>
+                <p><span class="glyphicon glyphicon-phone"></span> +86 15161378268</p>
+                <p><span class="glyphicon glyphicon-envelope"></span> 1041861310@qq.com</p>
+            </div>
+            <div class="col-sm-7 slideanim">
+                <form action="/" method="POST">
+                    <div class="row">
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="name" name="name" placeholder="您怎么称呼？" type="text" required>
+                        </div>
+                        <div class="col-sm-6 form-group">
+                            <input class="form-control" id="contact" name="contact" placeholder="任意联系方式" type="text"
+                                   required>
+                        </div>
+                    </div>
+                    <textarea class="form-control" id="content" name="content" placeholder="您遇到了什么无法破解的局面？" rows="5"
+                              required></textarea><br>
+                    <div class="row">
+                        <div class="col-sm-12 form-group">
+                            <button class="btn btn-default pull-right" type="submit">发送</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!--我是 地图-->
+    <div class="map" id="map" tabindex="0" style="height:400px;width:100%;"></div>
+
+
+</div>
+
+<!--我是底部-->
+<footer class="container-fluid text-center">
+    <a href="#myPage" title="To Top">
+        <span class="glyphicon glyphicon-chevron-up"></span>
+    </a>
+    <blockquote>
+        我是刘贤磊，希望能尽快为您破局。</p>
+        <footer>2019.01.31 留</footer>
+    </blockquote>
+</footer>
+
+<!--我是导航栏-->
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">破局网</a>
+        </div>
+        <div class="collapse navbar-collapse" id="myNavbar">
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#creater">创立人介绍</a></li>
+                <li><a href="#dynamic">动态</a></li>
+                <li><a href="#project">项目案例</a></li>
+                <li><a href="#viewpoint">观点</a></li>
+                <li><a href="#answer">问答</a></li>
+                <li><a href="#unit">合作单位</a></li>
+                <li><a href="#contact">联系我们</a></li>
+                <!--<li class="dropdown">-->
+                    <!--<a class="dropdown-toggle" data-toggle="dropdown" href="#"><strong>shakalaka</strong>-->
+                        <!--<span class="caret"></span></a>-->
+                    <!--<ul id="dropli" class="dropdown-menu" style="background-color: #1b6d85">-->
+                        <!--<li><a href="#">article</a></li>-->
+                        <!--<li><a href="#">code</a></li>-->
+                        <!--<li><a href="voice">music & voice</a></li>-->
+                    <!--</ul>-->
+                <!--</li>-->
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!--我是 填写联系我后的模态框 -->
+<div class="modal fade" id="myModal" role="dialog">
+    <div class="modal-dialog">
+        <div class="modal-header" style="padding:35px 50px;">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4><span class="glyphicon glyphicon-ok"></span>感谢您的来信，我会尽快为您提供破局思路</h4>
+        </div>
+    </div>
+</div>
 
 </body>
+<script type="text/javascript"
+        src="http://webapi.amap.com/maps?v=1.3&key=ded510d397ea4bfc74cfd3aa5e6c2b6e&callback=loadMap"></script>
+<script>
+
+
+    var infor = '<%= backWay %>';
+    if (infor == "contact") {
+        $("#myModal").modal();
+    }
+
+    $(document).ready(function () {
+        // Add smooth scrolling to all links in navbar + footer link
+        $(".navbar a, footer a[href='#myPage']").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (900) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 900, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    })
+
+    $(window).scroll(function () {
+        $(".slideanim").each(function () {
+            var pos = $(this).offset().top;
+
+            var winTop = $(window).scrollTop();
+            if (pos < winTop + 600) {
+                $(this).addClass("slide");
+            }
+        });
+
+//        $(".map").each(function () {
+//            var pos = $(this).offset().top;
+//            var winTop = $(window).scrollTop();
+//            if (pos < winTop + 600) {
+//                loadMap();
+//            }
+//        })
+
+    });
+
+    //    window.onreadystatechange  = loadMap();
+    // 异步加载地图
+    function loadMap() {
+
+        var marker, map = new AMap.Map('map', {
+            resizeEnable: true,
+            zoom: 15,
+            center: [119.22295, 34.59669],
+            zoomEnable: false,//禁止缩放
+            dragEnable: false//禁止拖拽
+        });
+
+        if (marker) {
+            return;
+        }
+        marker = new AMap.Marker({
+            icon: "img/mark_b.png",
+            position: [119.22295, 34.59669]
+        });
+        marker.setMap(map);
+    }
+
+</script>
 </html>
